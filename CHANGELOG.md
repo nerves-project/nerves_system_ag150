@@ -1,5 +1,14 @@
 # Changelog
 
+## v0.8.0
+
+This version switches to using the `nerves_package` compiler. This will
+consolidate overall deps and compilers.
+
+  * New features
+    * Bump toolchain to use gcc 5.3 (previously using gcc 4.9.3)
+    * Bump Linux kernel to 4.4
+
 ## v0.7.0
 
 When upgrading to this version, be sure to review the updates to

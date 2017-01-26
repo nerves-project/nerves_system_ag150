@@ -1,14 +1,15 @@
 # Logic Supply AG150
 [![Build Status](https://travis-ci.org/nerves-project/nerves_system_ag150.png?branch=master)](https://travis-ci.org/nerves-project/nerves_system_ag150)
 
-This is the base Nerves System configuration for the Logic Supply AG150.
+This is the base Nerves System configuration for the Logic Supply AG150. It is close to a generic x86
+configuration and should be useful for other 32-bit x86 boards.
 
 | Feature              | Description                     |
 | -------------------- | ------------------------------- |
 | CPU                  | 1.86 GHz Intel Atom N2800       |
 | Memory               | 1 GB+ DRAM                      |
 | Storage              | Internal SSD or USB Flash drive |
-| Linux kernel         | 3.13.5                          |
+| Linux kernel         | 4.4                          |
 | IEx terminal         | UART - ttyS0                    |
 | GPIO, I2C, SPI       | No                              |
 | ADC                  | No                              |

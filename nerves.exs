@@ -5,16 +5,26 @@ version =
   |> File.read!
   |> String.strip
 
-config :nerves_system_ag150, :nerves_env,
+pkg = :nerves_system_ag150
+
+config pkg, :nerves_env,
   type: :system,
   version: version,
-  mirrors: [
-    "https://github.com/nerves-project/nerves_system_ag150/releases/download/v#{version}/nerves_system_ag150-v#{version}.tar.gz",
-    "https://s3.amazonaws.com/nerves/artifacts/nerves_system_ag150-#{version}.tar.gz"],
-  build_platform: Nerves.System.Platforms.BR,
-  build_config: [
+  compiler: :nerves_package,
+  artifact_url: [
+    "https://github.com/nerves-project/#{pkg}/releases/download/v#{version}/#{pkg}-v#{version}.tar.gz",
+  ],
+  platform: Nerves.System.BR,
+  platform_config: [
     defconfig: "nerves_defconfig",
-    package_files: [
-      "rootfs-additions"
-    ]
+  ],
+  checksum: [
+    "rootfs-additions",
+    "linux-4.4.defconfig",
+    "fwup.conf",
+    "nerves_defconfig",
+    "nerves.exs",
+    "post-createfs.sh",
+    "syslinux.cfg",
+    "VERSION"
   ]
